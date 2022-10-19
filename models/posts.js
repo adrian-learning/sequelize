@@ -9,14 +9,14 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  
+
   Posts.init({
-    id: DataTypes.INTEGER,
     title: DataTypes.STRING,
     body: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Posts',
   });
+  
   return Posts;
 };

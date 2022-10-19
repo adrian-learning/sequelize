@@ -4,9 +4,10 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Posts extends Model {
-    
+    static a = 0
     static associate(models) {
-      // define association here
+      console.log(models)
+      this.belongsToMany(models.Users,{ foreignKey: 'postId', through: 'UserPosts', as: 'User'})
     }
   }
 

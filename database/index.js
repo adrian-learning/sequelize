@@ -9,8 +9,13 @@ const sequelize = new Sequelize(config.database, config.username, config.passwor
 const posts = Posts(sequelize, DataTypes)
 const users = Users(sequelize, DataTypes)
 
-//posts.associate(sequelize.models)
-//users.associate(sequelize.models)
+posts.associate(sequelize.models)
+users.associate(sequelize.models)
 
-module.exports = sequelize
+posts.a = 10
+module.exports = {
+    sequelize,
+    posts,
+    users
+}
 

@@ -15,7 +15,7 @@ users.associate(sequelize.models)
 posts.a = 10
 module.exports = {
     sequelize,
-    posts,
-    users
+    Posts: posts,
+    Users: users
 }
 
